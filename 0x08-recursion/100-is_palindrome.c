@@ -22,12 +22,10 @@ int is_palindrome(char *s)
 
 int find_length(char *s)
 {
-	int i = 0;
+	if (!*s)
+		return (0);
 
-	while (*(s + i))
-		i++;
-
-	return (i);
+	return (1 + find_length(s + 1));
 }
 
 /**
